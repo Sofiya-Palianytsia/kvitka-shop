@@ -3,43 +3,13 @@
 :root {
     --main-color: black;
     --accent-color:#E9E1DE;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Comfortaa", cursive;
+    scroll-behavior: smooth;
 }
 
 body {
     max-width: 980px;
     margin: auto;
-}
-
-.button {
-    display: inline-block;
-    padding: 0.35em 1.2em;
-    border: 0.1em solid #D90006;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-weight: 300;
-    color: white;
-    text-align: center;
-    transition: all 0.2s;
-    background-color: #D90006;
-}
-
-.button:hover {
-    color: #000000;
-    background-color: #FFFFFF;
-    cursor: pointer;
-}
-
-.card-button {
-    border-color: black;
-    color: black;
-}
-
-.card-button:hover {
-    background-color: black;
-    color: white;
 }
 
 header .logo {
@@ -84,35 +54,115 @@ header .banner {
     background-image: url(../img/banner.jpg);
     background-size: cover;
     background-position: center;
-}
-
-.banner {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-
 }
 
-header .banner h1 {
+.banner h1 {
     font-size: 2.5rem;
     font-family: "Comfortaa", cursive;
     color:white;
     font-weight: bold;
     text-align: right;
     text-shadow: 1px 1px 3px #000000;
+    margin: 30px;
 }
 
-header .banner p {
+.banner p {
     font-family: "Pacifico", cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color:white;
     text-shadow: 1px 1px 3px #000000;
+    margin: 30px;
 }
 
-.button a {
+.banner a {
+    margin: 50px;
+}
+/* спеціальні пропозиції*/
+#about h2 {
+    text-align: center;
+}
+
+.offer h2 {
     display: flex;
-    justify-content: space-around;
-    text-decoration: none;
+    justify-content: center;
 }
 
+.offer a {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
 
+main .product {
+    border: solid 0.5px #D90006;
+    margin: 5px;
+}
+
+div .product img {
+    display: block;
+    width: 100%;
+}
+
+div .product h3 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+div .product p {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 3px;
+}
+
+div .product .product-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 500px) {
+    div .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3px;
+
+    }
+}
+
+@media (min-width: 660px) {
+    div .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 980px) {
+    div .product-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #D90006;
+    border: solid 1px transparent;
+    font-family: "Comfortaa", cursive;
+}
+
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: 1px solid #D90006;
+}
