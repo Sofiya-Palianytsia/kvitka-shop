@@ -132,31 +132,36 @@ div .product p {
 
 div .product-button {
     text-align: center;
+    margin: 10px;
 }
 /*feedback*/
-@media (min-width: 980px) {
-    .feedback-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 3px;
-    }
-}
-
 @media (min-width: 500px) {
     .feedback-list {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 3px;
     }
 }
 
+@media (min-width: 980px) {
+    .feedback-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3px;
+    }
+}
+
 div .feedback {
-    border: solid 0.5px black;
-    margin: 5px;
+    padding: 50px;
 }
 
 div .feedback img {
     display: block;
     width: 100%;
+}
+
+div .feedback p {
+    text-align: center;
+    font-size: 1rem;
 }
 
 
