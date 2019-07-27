@@ -81,19 +81,32 @@ header .banner {
     margin: 50px;
 }
 /* спеціальні пропозиції*/
+@media (min-width: 500px) {
+    div .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3px;
+    }
+}
+
+@media (min-width: 660px) {
+    div .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 980px) {
+    div .product-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
 #about h2 {
     text-align: center;
 }
 
 .offer h2 {
-    display: flex;
-    justify-content: center;
-}
-
-.offer a {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 main .product {
@@ -117,33 +130,37 @@ div .product p {
     padding: 3px;
 }
 
-div .product .product-button {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+div .product-button {
+    text-align: center;
+}
+/*feedback*/
+@media (min-width: 980px) {
+    .feedback-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3px;
+    }
 }
 
 @media (min-width: 500px) {
-    div .product-list {
-        display: grid;
+    .feedback-list {
         grid-template-columns: 1fr 1fr;
         grid-gap: 3px;
-
     }
 }
 
-@media (min-width: 660px) {
-    div .product-list {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+div .feedback {
+    border: solid 0.5px black;
+    margin: 5px;
 }
 
-@media (min-width: 980px) {
-    div .product-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+div .feedback img {
+    display: block;
+    width: 100%;
 }
 
+
+/*buttons*/
 .button {
     display: inline-block;
     padding: 0.35em 1.2em;
