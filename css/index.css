@@ -105,8 +105,9 @@ header .banner {
     text-align: center;
 }
 
-.offer h2 {
+.offer {
     text-align: center;
+    margin: 10px;
 }
 
 main .product {
@@ -132,8 +133,14 @@ div .product p {
 
 div .product-button {
     text-align: center;
-    margin: 10px;
+    margin-top: auto;
 }
+
+/*.product {
+    display: grid;
+    grid-template-rows: 9fr 151fr 50fr 11fr 16fr;
+}
+*/
 /*feedback*/
 @media (min-width: 500px) {
     .feedback-list {
