@@ -1,25 +1,26 @@
 {
-  "name": "kvitka-shop",
+  "name": "node-save-form-to-file",
   "version": "1.0.0",
-  "description": "",
+  "description": "  ",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sofiya-Palianytsia/kvitka-shop.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sofiya-Palianytsia/kvitka-shop/issues"
   },
-  "homepage": "https://github.com/Sofiya-Palianytsia/kvitka-shop#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/Sofiya-Palianytsia/kvitka-shop#readme"
 }

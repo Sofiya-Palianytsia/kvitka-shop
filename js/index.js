@@ -1,3 +1,11 @@
+const cart = new Cart($('#cartModal'));
+const productList = new ProductList(
+  'products.json',
+  $('.products-container'),
+  cart
+);
+
+//Form
 document.querySelector('.message-form input[type=submit]')
 .addEventListener('click', login);
 

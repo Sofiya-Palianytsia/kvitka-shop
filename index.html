@@ -1,172 +1,235 @@
 <!DOCTYPE html>
 <html lang="uk">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Kvitka</title>
-		<link rel="stylesheet" href="css/index.css" />
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Kvitka</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
 
-	<body>
-		<header>
-			<nav>
-				<p class="logo">Kvitka</p>
-				<ul class="menu">
-					<li>
-						<a href="index.html">головна</a>
-					</li>
-					<li>
-						<a href="shop.html">магазин</a>
-					</li>
-					<li>
-						<a href="index.html#feedback">відгуки</a>
-					</li>
-					<li>
-						<a href="index.html#footer">контакти</a>
-					</li>
-					<li>
-						<a href="cart.html">кошик</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="banner">
-				<h1>Доставка<br>букетів</h1>
-					<p>Ми даруєм емоції...</p>
-					<a href="shop.html" class="button">Замовити</a>
-				</div>
-			</header>
+<body>
+	<header class="container" id="home">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" id="logo">Kvitka</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">головна<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#products">магазин</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#feedback-heading">відгуки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#footer">контакти</a>
+            </li>
+            </ul>
+        </div>
+        <div>
+            <a class="nav-link" href="#cartModal" data-toggle="modal">
+             <i class="fas fa-shopping-cart" id="busket"></i>
+             <span id="cart-badge" class="badge badge-light"></span>
+             </a>
+        </div>
+        </nav>
 
-			<main>
-				<article id="about">
-					<h2>Наші переваги</h2>
-					<p>Немає часу на походи по квіткових магазинах? Відмінний варіант для зайнятих людей - замовити квіти з доставкою.
+        <div class="banner">
+            <h1>Доставка<br>букетів</h1>
+            <p>Ми даруєм емоції...</p>
+            <a href="index.html#products" class="btn btn-primary">Замовити</a>
+        </div>
+    </header>
+
+	<main class="container">
+       <div id="about-us-article">
+			<article>
+				<h2>Наші переваги</h2>
+				<p>Немає часу на походи по квіткових магазинах? Відмінний варіант для зайнятих людей - замовити квіти з доставкою.
         Маючи 10-річний досвід в області флористики та продажу квітів, ми пропонуємо покупцям відмінний сервіс,
         доступні ціни та цілодобову доставку букетів в будь-яку точку Львова, яка здійснюється протягом 2 годин.
         Серед інших переваг:
-					</p>
-					<ul>
-						<li>завжди свіжі, здорові і красиві рослини;</li>
-						<li>стовідсоткове виконання (навіть якщо одержувача немає вдома або в офісі, кур'єр залишить квіти друзям,
+				</p>
+				<ul>
+					<li>завжди свіжі, здорові і красиві рослини;</li>
+					<li>стовідсоткове виконання (навіть якщо одержувача немає вдома або в офісі, кур'єр залишить квіти друзям,
                 сусідам, колегам, консьєржу);</li>
-						<li>можливість ознайомитися з відгуками покупців і залишити свій;</li>
-						<li>різні способи оплати (кредитною карткою і готівкою);</li>
-						<li>безкоштовна доставка при покупці на суму понад 500 грн.</li>
+					<li>можливість ознайомитися з відгуками покупців і залишити свій;</li>
+					<li>різні способи оплати (кредитною карткою і готівкою);</li>
+					<li>безкоштовна доставка при покупці на суму понад 500 грн.</li>
 					</ul>
-					<p>Замовляйте букети в KVITKA та радуйте своїх близьких!</p>
-				</article>
+				<p>Замовляйте букети в KVITKA та радуйте своїх близьких!</p>
+			</article>
+         </div>
 
-				<div class="offer">
-					<h2>Спеціальні пропозиції</h2>
+        <section>
+            <h2 id="products">Наші букети</h2>
+            <div class="row products-container">
+               <!--Products are dynamically generated here-->
+            </div>
+        </section>
 
-					<div class="product-list">
-						<article class="product">
-							<h3>Букет "Східна казка"</h3>
-							<img src="img/east-dream.jpg" alt="east-dream-orhid-bouquet.jpg"/>
-							<p>Чарівна коробка з орхідеями, півоніями, гортензією, гвоздиками і астильбою. Оформлена атласною стрічкою у подарунковій коробці.</p>
-							<p>Ціна 980 грн.</p>
-							<div class="product-button">
-								<button class="button">Купити</button>
-							</div>
-						</article>
-
-						<article class="product">
-							<h3>Букет "Північ"</h3>
-							<img src="img/bruneia.jpg" alt="bruneia-blue-yellow-rose-bouquet"/>
-							<p>Букет з трояндами, брунією та зеленню. Оформлений в крафтовий папір.</p>
-							<p>Ціна 845 грн.</p>
-							<div class="product-button">
-								<button class="button">Купити</button>
-							</div>
-						</article>
-
-						<article class="product">
-							<h3>Букет "Чарівна мрія"</h3>
-							<img src="img/charivna-mriia.jpg" alt="charivna-mriia-rose-bouquet"/>
-							<p>Чарівний світлий снопик з еустомою, трояндою, гвоздикою та зеленню. Оформлений атласною стрічкою.</p>
-							<p>Ціна 560 грн.</p>
-							<div class="product-button">
-								<button class="button">Купити</button>
-							</div>
-						</article>
-
-						<article class="product">
-							<h3>Букет "Вогняний сплеск"</h3>
-							<img src="img/vognianiy-splesk.jpg" alt="vognianiy-splesk-red-rose-bouquet"/>
-							<p>Букет з бавовною, трояндами, скімією та евкаліптом. Оформлений у крафтовий папір.</p>
-							<p>Ціна 750 грн.</p>
-							<div class="product-button">
-								<button class="button">Купити</button>
-							</div>
-						</article>
-					</div>
-					<div class="offer">
-						<a href="shop.html" class="button">Більше букетів</a>
-					</div>
-					<h2>Відгуки клієнтів</h2>
-				</div>
-				<div class="feedback-list">
-					<div class="feedback">
-						<img src="img/reviews-anna_png.png" alt="reviews-anna-foto-avatar"/>
+            <div id="feedback-heading">
+                 <h2>Відгуки клієнтів</h2>
+                <div class="feedback-list" id="feedback">
+                    <div class="feedback">
+						<img src="img/reviews-anna.png" alt="reviews-anna-foto-avatar"/>
 						<p>Багато чула позитивних відгуків про компанію і вирішила скористатися їх послугами!
             У Вас неймовірне почуття прекрасного! Букет вийшов ніжним і супер-гарним!))
 						</p>
 					</div>
 					<div class="feedback">
-						<img src="img/reviews-ira_png.png" alt="reviews-ira-foto-avatar"/>
+						<img src="img/reviews-ira.png" alt="reviews-ira-foto-avatar"/>
 						<p>Букети Kvitka дуже індивідуальні! Вони створюють настрій, в них стільки фарб,
             яскравості і цікавих деталей, що можна милуватися ними вічно! З любов'ю, ваш постійний клієнт!)
 						</p>
 					</div>
 					<div class="feedback">
-						<img src="img/reviews-katya_png.png" alt="reviews-katya-foto-avatar"/>
+						<img src="img/reviews-katya.png" alt="reviews-katya-foto-avatar"/>
 						<p>Шикарні квіти, які дарують чарівний настрій))) букети зберігають свою красу більше тижня!)
             дякуємо за душевність та індивідуальний підхід, які ви вкладаєте в свої творіння!
 						</p>
 					</div>
 				</div>
+            </div>
 
-				<div>
-					<h2>Зв'язатись з нами</h2>
+			<div class="form-section">
+				<h2>Зв'язатись з нами</h2>
 					<form class="message-form">
-						<label>Ваше Ім'я*:
-							<input type="text" placeholder="Your Name" name="name" required>
-						</label>
-							<br>
-						<label for="email">Ваша Email-адреса*</label>
-							<input id="email" type="email"  placeholder="Email" name="email" required>
-							<br>
+                        <div class="form-group">
+						    <label for="name">Ваше Ім'я*:</label>
+							    <input type="text" placeholder="Ім'я" name="name" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+						    <label for="email">Ваша Email-адреса*</label>
+							    <input type="email" placeholder="Email" name="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
 						<label for="message">Повідомлення:</label>
-							<textarea id="message" rows="5" cols="70" name="message">
+							<textarea id="message" rows="5" cols="70" name="message" class="form-control">
 						</textarea>
-							<br>
-							<input type="submit" value="send">
+                        </div>
+						<input type="submit" class="btn btn-primary" value="Відправити">
 					</form>
 				</div>
 			</main>
 
-			<footer id="footer">
-				<h2>Ми в соціальних мережах</h2>
-					<a href="https://www.facebook.com/">
-						<img src="img/logo-facebook.png" alt="logo-facebook-contact-us" width="50" height="50"/>
-					</a>
-					<a href="https://www.instagram.com/">
-						<img src="img/logo-instagram.png" alt="logo-instagram-contact-us" width="50" height="50"/>
-					</a>
-					<a href="https://www.google.com/maps/place/Kvitna+-+%D0%BD%D0%B0%D0%B4%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B0+%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0+%D0%BA%D0%B2%D1%96%D1%82%D1%96%D0%B2/@49.829433,24.026815,17z/data=!3m1!4b1!4m5!3m4!1s0x473add68da133c25:0xa716e98d7dff53d1!8m2!3d49.829433!4d24.0290037">
-						<img src="img/logo-google.png" alt="logo-google-contact-us" width="50" height="50"/>
-					</a>
-				<address>
-					м. Львів
-					<br>
-					вул. Володимира Великого, 15
-					<br>
-					тел. +38 (093) 245 36 56
-				</address>
-					<img src="img/map.jpg" alt="map-where-to-find-us"/>
-					<p>&copy; 2019 Sofiya Palianytsia<p>
-			</footer>
-				<script src="js/index.js"></script>
-	</body>
+            <footer class="footer" id="footer">
+			    <div class="footer-left">
+				    <img src="img/map.jpg" alt="map-find-us">
+			    </div>
+
+			    <div class="footer-center">
+				<div>
+                    <img src="img/logo-map-marker.png" alt="red-round-logo-map-marker">
+					<p><span>вул. Володимира Великого, 15</span> м. Львів</p>
+				</div>
+
+				<div>
+					<img src="img/logo-phone.png" alt="red-round-logo-phone">
+					<p>+38 (093) 245 36 56</p>
+				</div>
+
+				<div>
+					<img src="img/logo-email.png" alt="red-round-logo-email">
+                    <p><a>kvitka@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+                 <h3>Kvitka</h3>
+				    <div class="footer-links">
+				    <a href="https://www.facebook.com/">
+				    	<img src="img/logo-facebook.png" alt="logo-facebook-contact-us"/>
+				    </a>
+				    <a href="https://www.instagram.com/">
+				    	<img src="img/logo-instagram.png" alt="logo-instagram-contact-us"/>
+				    </a>
+			    	<a href="https://www.google.com/maps/place/Kvitna+-+%D0%BD%D0%B0%D0%B4%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D0%B0+%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0+%D0%BA%D0%B2%D1%96%D1%82%D1%96%D0%B2/@49.829433,24.026815,17z/data=!3m1!4b1!4m5!3m4!1s0x473add68da133c25:0xa716e98d7dff53d1!8m2!3d49.829433!4d24.0290037">
+				    	<img src="img/logo-google.png" alt="logo-google-contact-us"/>
+				    </a>
+				    </div>
+				    <p class="footer-company-name">Sofiya Palianytsia &copy; 2019</p>
+			</div>
+		</footer>
+
+         <!-- Modal Product Info -->
+    <div class="modal fade" id="productInfoModal" tabindex="-1" role="dialog" aria-labelledby="productInfoLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="productInfoLabel"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <img class="card-img-top" src="" alt="">
+              <h4 class="card-title"></h4>
+              <p class="card-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+            <button class="btn btn-primary buy" data-id="id">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Cart -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartLabel">Корзина</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="cart-product-list-container"></div>
+            <hr>
+            <div class="container">
+              <form>
+                <div class="form-group row">
+                  <label for="client-name" class="col-4 col-form-label">Ваше Ім'я:</label>
+                  <input class="form-control col-8" type="text" id="client-name" required>
+                </div>
+                <div class="form-group row">
+                  <label for="client-email" class="col-4 col-form-label">Ваш email:</label>
+                  <input class="form-control col-8" type="email" id="client-email" required>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+            <button class="btn btn-primary order">Замовити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    <script async src="js/smooth-scroll.js"></script>
+    <script async src="js/alert-window.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/product-list.js"></script>
+    <script defer src="js/index.js"></script>
+    </body>
 </html>
